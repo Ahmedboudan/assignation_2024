@@ -1,18 +1,13 @@
 package ma.nemo.assignment.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
+import jakarta.persistence.*;
+import lombok.ToString;
+
 import java.util.Date;
 
 @Entity
 @Table(name = "Sales")
+@ToString
 public class Sale {
 
   @Id
@@ -22,6 +17,9 @@ public class Sale {
   @ManyToOne
   @JoinColumn(name = "productId")
   private Product product;
+
+  @Transient
+  private String productCode;
 
   private Integer soldQuantity;
 
@@ -36,6 +34,14 @@ public class Sale {
 
   public Long getSaleId() {
     return saleId;
+  }
+
+  public String getProductCode() {
+    return productCode;
+  }
+
+  public void setProductCode(String productCode) {
+    this.productCode = productCode;
   }
 
   public void setSaleId(Long saleId) {

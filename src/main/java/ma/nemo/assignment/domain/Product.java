@@ -1,14 +1,12 @@
 package ma.nemo.assignment.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
+
 import lombok.ToString;
 
 @Entity
@@ -28,8 +26,17 @@ public class Product {
 
   private String description;
 
-  private Double unitPrice;
+  public Date getExpirationDate() {
+    return expirationDate;
+  }
 
+  public void setExpirationDate(Date expirationDate) {
+    this.expirationDate = expirationDate;
+  }
+
+  private Double unitPrice;
+  @Temporal(TemporalType.DATE)
+  private Date expirationDate;
   private Integer quantityInStock;
 
   @Temporal(TemporalType.TIMESTAMP)

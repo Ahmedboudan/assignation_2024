@@ -1,5 +1,7 @@
 package ma.nemo.assignment.dto;
 
+import lombok.Builder;
+
 import java.util.Date;
 
 public class ProductDto {
