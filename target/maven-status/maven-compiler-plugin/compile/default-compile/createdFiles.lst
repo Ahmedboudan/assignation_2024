@@ -1,0 +1,17 @@
+ma\nemo\assignment\config\JpaConfig.class
+ma\nemo\assignment\exceptions\ProductValidationException.class
+ma\nemo\assignment\mapper\ProductMapper.class
+ma\nemo\assignment\web\common\ExceptionHandlingController.class
+ma\nemo\assignment\NiceStoreApplication.class
+ma\nemo\assignment\domain\User.class
+ma\nemo\assignment\exceptions\ProductAlreadyExists.class
+ma\nemo\assignment\domain\Product.class
+ma\nemo\assignment\repository\UserRepository.class
+ma\nemo\assignment\dto\ProductDto.class
+ma\nemo\assignment\domain\Supply.class
+ma\nemo\assignment\domain\TransactionHistory.class
+ma\nemo\assignment\exceptions\ProductNotFound.class
+ma\nemo\assignment\domain\Sale.class
+ma\nemo\assignment\repository\ProductRepository.class
+ma\nemo\assignment\web\ProductController.class
+ma\nemo\assignment\domain\util\EventType.class
